@@ -12,7 +12,6 @@ function preload() {
 function setup() {
   // Creiamo il canvas
   createCanvas(windowWidth, windowHeight);
-  noLoop(); // Renderizza solo quando necessario
   
   // Assegna un colore per ogni continente
   let rows = table.getRows();
