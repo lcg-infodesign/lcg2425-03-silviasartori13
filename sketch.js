@@ -12,7 +12,6 @@ function preload() {
 function setup() {
   // Creiamo il canvas
   createCanvas(windowWidth, windowHeight);
-  noLoop(); // Renderizza solo quando necessario
   
   // Assegna un colore per ogni continente
   let rows = table.getRows();
@@ -102,7 +101,7 @@ function mouseMoved() {
       tooltip = {
         x: mouseX + 10,
         y: mouseY + 10,
-        text: `Name: ${pos.name}\nLength: ${pos.row.getNum('length')} km\nCountries: ${pos.row.getNum('countries')}`,
+        text: Name: ${pos.name}\nLength: ${pos.row.getNum('length')} km\nCountries: ${pos.row.getNum('countries')},
         visible: true,
       };
       break;
@@ -180,7 +179,7 @@ function displaySelectedRiver() {
   textSize(32);
   textAlign(LEFT, TOP);
   textStyle(BOLD);
-  text(`River's name: ${selectedRiver}`, legendX, legendY);
+  text(River's name: ${selectedRiver}, legendX, legendY);
 }
 
 function displayTooltip() {
