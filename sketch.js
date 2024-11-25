@@ -6,13 +6,18 @@ let tooltip = { x: 0, y: 0, text: "", visible: false }; // Tooltip per informazi
 
 function preload() {
   // Carichiamo il dataset
-  table = loadTable('data.csv', 'csv', 'header');
+  try {
+    table = loadTable('data.csv', 'csv', 'header');
+  } catch (error) {
+    console.error("Errore nel caricamento del dataset:", error);
+    noLoop(); // Ferma il disegno se non ci sono dati
+  }
 }
 
 function setup() {
   // Creiamo il canvas
   createCanvas(windowWidth, windowHeight);
-  
+
   // Assegna un colore per ogni continente
   let rows = table.getRows();
   for (let row of rows) {
@@ -26,9 +31,9 @@ function setup() {
 function draw() {
   background(240); // Puliamo lo schermo
   glyphPositions = []; // Reset delle posizioni
-  
+
   let rows = table.getRows();
-  let cols = 10;
+  let cols = floor(width / 150); // Calcolo dinamico delle colonne
   let marginLeft = 100;
   let marginTop = 150;
   let marginRight = 20;
@@ -50,6 +55,11 @@ function draw() {
     if (isNaN(length) || length === 0) continue;
 
     let size = map(length, 1000, 7000, 30, maxSize);
+
+    if (selectedRiver === row.getString('name')) {
+      size += sin(frameCount * 0.1) * 5; // Effetto pulsante
+    }
+
     glyphPositions.push({ x, y, size, name: row.getString('name'), row });
 
     // Disegniamo il glifo
@@ -73,6 +83,7 @@ function draw() {
   }
 
   drawLegend(); // Disegna la leggenda
+
   if (selectedRiver) {
     displaySelectedRiver(); // Mostra il nome del fiume selezionato
   }
@@ -108,6 +119,11 @@ function mouseMoved() {
     }
   }
   redraw(); // Ridisegna per aggiornare il tooltip
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  redraw();
 }
 
 function drawLegend() {
@@ -183,15 +199,27 @@ function displaySelectedRiver() {
 }
 
 function displayTooltip() {
-  fill(255);
+  let padding = 10;
+  let lines = tooltip.text.split('\n');
+  let textWidth = 0;
+
+  for (let line of lines) {
+    textWidth = max(textWidth, textWidth(line));
+  }
+
+  let boxWidth = textWidth + padding * 2;
+  let boxHeight = lines.length * 16 + padding * 2;
+
+  fill(255, 240);
   stroke(0);
   strokeWeight(1);
-  rect(tooltip.x, tooltip.y, 200, 70, 5);
+  rect(tooltip.x, tooltip.y, boxWidth, boxHeight, 5);
 
   fill(0);
   noStroke();
   textSize(14);
   textAlign(LEFT, TOP);
-  text(tooltip.text, tooltip.x + 10, tooltip.y + 10);
+  for (let i = 0; i < lines.length; i++) {
+    text(lines[i], tooltip.x + padding, tooltip.y + padding + i * 16);
+  }
 }
-
