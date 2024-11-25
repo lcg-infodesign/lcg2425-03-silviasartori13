@@ -4,6 +4,8 @@ let continentColors = {}; // Colori per ciascun continente
 let glyphPositions = []; // Array per salvare le posizioni dei glifi
 let tooltip = { x: 0, y: 0, text: "", visible: false }; // Tooltip per informazioni sui glifi
 
+const MIN_GLYPH_DISTANCE = 20; // Distanza minima tra i glifi
+
 function preload() {
   // Carichiamo il dataset
   try {
@@ -58,6 +60,24 @@ function draw() {
 
     if (selectedRiver === row.getString('name')) {
       size += sin(frameCount * 0.1) * 5; // Effetto pulsante
+    }
+
+    // Controlla la sovrapposizione con altri glifi
+    let overlap = true;
+    let attempts = 0;
+    while (overlap && attempts < 50) {
+      overlap = false;
+      for (let pos of glyphPositions) {
+        let d = dist(x, y, pos.x, pos.y);
+        if (d < size / 2 + pos.size / 2 + MIN_GLYPH_DISTANCE) {
+          // Se si sovrappongono, prova una nuova posizione
+          x = random(marginLeft, width - marginRight);
+          y = random(marginTop, height - marginBottom);
+          overlap = true;
+          attempts++;
+          break;
+        }
+      }
     }
 
     glyphPositions.push({ x, y, size, name: row.getString('name'), row });
