@@ -1,0 +1,101 @@
+id,name,countries,length,area,discharge,outflow,continent,tributaries,min_temp,max_temp,avg_temp
+1,Nile–White Nile–Blue Nile,"11",6650,3254555,2800,Mediterranean Sea,Africa,2,25,30,27.5
+2,Amazon–Ucayali–Tambo–Ene–Mantaro,"6",6575,7050000,209000,Atlantic Ocean,South America,1100,24,28,26
+3,Yangtze,1,6300,1808500,31900,East China Sea,Asia,700,16,18,17
+4,Mississippi–Missouri–Jefferson–Beaverhead–Red Rock–Hell Roaring,1,6275,2980000,16200,Gulf of Mexico,North America,250,10,25,17.5
+5,Yenisei–Angara–Selenge–Ider,"2",5539,2580000,19800,Kara Sea,Asia,102,-10,5,-2.5
+6,Yellow River,1,5464,752546,2110,Bohai Sea,Asia,50,8,15,11.5
+7,Ob–Irtysh,"4",5410,2990000,12800,Gulf of Ob,Asia,50,-5,10,2.5
+8,Río de la Plata–Paraná–Rio Grande,"5",4880,3100000,25700,Atlantic Ocean,South America,80,15,22,18.5
+9,Congo–Chambeshi,"9",4700,4014500,41300,Atlantic Ocean,Africa,40,22,26,24
+10,Amur–Argun,"3",4480,1855000,11000,Sea of Okhotsk,Asia,30,-10,5,-2.5
+11,Lena,1,4400,2490000,16400,Arctic Ocean,Asia,20,-15,5,-5
+12,Mekong–Lancang,"6",4350,795000,16000,South China Sea,Asia,100,22,28,25
+13,Mackenzie–Slave–Finlay–Peace,1,4241,1740000,9700,Arctic Ocean,North America,40,-5,10,2.5
+14,Niger,"10",4180,2092000,6000,Gulf of Guinea,Africa,30,25,30,27.5
+15,Brahmaputra–Tsangpo,"3",3960,651335,19800,Bay of Bengal,Asia,40,15,25,20
+16,Murray–Darling,1,3750,1061469,767,Indian Ocean,Australia,10,15,30,22.5
+17,Tocantins–Araguaia,1,3650,967059,13700,Atlantic Ocean,South America,30,24,28,26
+18,Volga,1,3645,1360000,8060,Caspian Sea,Europe,200,-5,10,2.5
+19,Shatt al-Arab–Euphrates–Tigris,"6",3600,879790,1350,Persian Gulf,Asia,20,15,30,22.5
+20,Purús,"2",3379,371042,8400,Amazon River,South America,60,24,28,26
+21,Madeira–Mamoré–Grande–Caine–Rocha,"3",3379,850000,31000,Amazon River,South America,50,24,28,26
+22,Yukon,"2",3190,832700,6430,Bering Sea,North America,30,-10,15,2.5
+23,Indus,"4",3180,1155000,6000,Arabian Sea,Asia,10,10,20,15
+24,São Francisco,1,3150,641000,2850,Atlantic Ocean,South America,168,20,25,22.5
+25,Syr Darya–Naryn,"4",3019,219000,1210,Aral Sea,Asia,10,0,15,7.5
+26,Salween,"3",2990,271914,16300,Andaman Sea,Asia,15,20,25,22.5
+27,Saint Lawrence–Great Lakes,"2",3058,1344200,10400,Atlantic Ocean,North America,40,0,10,5
+28,Rio Grande,"2",3057,558000,160,Gulf of Mexico,North America,30,15,25,20
+29,Lower Tunguska,1,2989,488000,4780,Yenisei River,Asia,15,-10,5,-2.5
+30,Danube,"10",2860,817000,6450,Black Sea,Europe,300,5,15,10
+31,Chishui,1,2860,142936,3800,Yangtze River,Asia,20,10,20,15
+32,Zambezi,"8",2734,1390000,4900,Indian Ocean,Africa,30,20,25,22.5
+33,Amu Darya,"4",2620,534739,2560,Aral Sea,Asia,10,10,20,15
+34,Dnieper,"3",2285,504000,1670,Black Sea,Europe,30,0,15,7.5
+35,Ganges,"4",2525,1000000,16000,Bay of Bengal,Asia,20,15,25,20
+36,Nelson–Saskatchewan,"2",2575,1070000,2370,Hudson Bay,North America,20,0,10,5
+37,Vilyuy,1,2646,491000,1350,Lena River,Asia,10,-10,5,-2.5
+38,Kolyma,1,2513,643000,3910,East Siberian Sea,Asia,5,-20,5,-7.5
+39,Colorado,"2",2330,637137,642,Gulf of California,North America,20,10,30,20
+40,Loire,1,1020,117054,802,Bay of Biscay,Europe,10,5,20,12.5
+41,Uruguay,"3",1838,385000,4900,Rio de la Plata,South America,10,15,20,17.5
+42,Ural,"2",2428,231000,400,Caspian Sea,Europe,10,-5,10,2.5
+43,Blue Nile,"11",1450,3254555,2800,Mediterranean Sea,Africa,2,20,30,25
+44,Sepik,"2",1126,77995,101,Pacific Ocean,Oceania,15,25,30,27.5
+45,Tapajós,1,2100,487103,12849,Amazon River,South America,20,24,28,26
+46,Seine,1,777,78500,470,English Channel,Europe,10,10,20,15
+47,Douro,"2",897,97280,423,Atlantic Ocean,Europe,15,10,20,15
+48,Irrawaddy,1,2170,413710,13159,Indian Ocean,Asia,10,20,30,25
+49,Shinano,1,367,1191,546,Sea of Japan,Asia,10,10,20,15
+50,Magdalena,1,1550,257438,7150,Caribbean Sea,South America,10,20,25,22.5
+51,Godavari,1,1465,312812,3085,Bay of Bengal,Asia,30,25,30,27.5
+52,Beni,1,1580,200000,14130,Madeira River,South America,15,24,28,26
+53,Po,1,652,74000,1500,Adriatic Sea,Europe,141,10,20,15
+54,Limpopo,"4",1800,415000,170,Indian Ocean,Africa,24,20,30,25
+55,Dniester,"2",1352,72100,310,Black Sea,Europe,14,5,15,10
+56,Columbia–Snake,"2",2000,668217,7420,Pacific Ocean,North America,38,5,20,12.5
+57,Rhine,"6",1233,185000,2900,North Sea,Europe,865,5,15,10
+58,Fraser,1,1375,23300,348,Strait of Georgia,North America,17,0,10,5
+59,Orinoco,"2",2140,880000,33000,Atlantic Ocean,South America,75,25,30,27.5
+60,Red River,"2",1360,242500,1250,Gulf of Tonkin,Asia,12,20,30,25
+61,Tagus,"2",1007,80900,430,Atlantic Ocean,Europe,36,10,20,15
+62,Ebro,1,910,85262,426,Mediterranean Sea,Europe,37,10,20,15
+63,Meuse,"3",925,36577,357,North Sea,Europe,36,10,20,15
+64,Drava,"5",725,40926,580,Danube River,Europe,26,5,15,10
+65,Neman,"3",937,98200,678,Curonian Lagoon,Europe,14,5,15,10
+66,Han,1,1416,2638,2417,Yellow Sea,Asia,9,10,25,17.5
+67,Guaporé,"2",1750,351750,35000,Amazon River,South America,12,25,30,27.5
+68,Mackenzie,1,4241,1740000,9700,Arctic Ocean,North America,21,-5,15,5
+69,Seversky Donets,"2",1053,98800,160,Don River,Europe,14,5,20,12.5
+70,Vistula,1,1047,194424,1080,Baltic Sea,Europe,27,5,15,10
+71,Neva,1,74,281000,2490,Baltic Sea,Europe,7,-5,10,2.5
+72,Tocantins,1,3650,967059,13700,Atlantic Ocean,South America,36,24,28,26
+73,Churchill,1,1690,287000,529,Hudson Bay,North America,5,-10,5,-2.5
+74,Mures,"2",768,28500,185,Danube River,Europe,9,5,15,10
+75,Khatanga,1,2278,364000,4100,Laptev Sea,Asia,3,-20,5,-7.5
+76,Xingu,1,1980,531250,9600,Amazon River,South America,25,24,28,26
+77,Sanaga,1,918,133000,1925,Atlantic Ocean,Africa,12,25,30,27.5
+78,Liao,1,1345,219000,500,Bohai Sea,Asia,13,5,20,12.5
+79,Mahanadi,1,858,141600,2100,Bay of Bengal,Asia,11,25,30,27.5
+80,Red River of the North,"2",885,289500,288,Lake Winnipeg,North America,7,-10,10,0
+81,Rio Negro,"3",2250,691000,29060,Amazon River,South America,10,24,28,26
+82,Sutlej,"3",1450,395000,500,Indus River,Asia,8,10,25,17.5
+83,Desna,"2",1130,88900,360,Dnieper River,Europe,6,5,15,10
+84,Pechora,1,1809,322000,4040,Barents Sea,Europe,12,-10,5,-2.5
+85,Tigris,"3",1850,375000,1200,Shatt al-Arab,Asia,10,20,30,25
+86,Aras,"4",1072,102000,285,Kura River,Asia,11,10,25,17.5
+87,Liard,1,1115,277100,3513,Mackenzie River,North America,15,-5,15,5
+88,Vychegda,1,1130,121000,1795,Northern Dvina River,Europe,5,-10,5,-2.5
+89,Olenyok,1,2292,220000,1210,Laptev Sea,Asia,5,-20,5,-7.5
+90,Trombetas,1,1300,133630,4055,Amazon River,South America,9,24,28,26
+91,Kuskokwim,1,1165,118000,1600,Bering Sea,North America,7,-10,10,0
+92,Olenek,1,2292,210000,1400,Laptev Sea,Asia,5,-20,5,-7.5
+93,Barito,1,900,70000,800,Java Sea,Asia,14,25,30,27.5
+94,Ural,"2",2428,231000,400,Caspian Sea,Europe,10,-5,10,2.5
+95,Teles Pires,1,1370,141830,5300,Amazon River,South America,13,24,28,26
+96,Arkansas,1,2349,505000,800,Mississippi River,North America,12,10,30,20
+97,Blue Nile,"11",1450,3254555,2800,Mediterranean Sea,Africa,2,20,30,25
+98,Tapajós,1,2100,487103,12849,Amazon River,South America,20,24,28,26
+99,Po,1,652,74000,1500,Adriatic Sea,Europe,141,10,20,15
+100,Limpopo,"4",1800,415000,170,Indian Ocean,Africa,24,20,30,25
