@@ -3,6 +3,14 @@ let selectedRiver = null; // Memorizziamo il fiume selezionato
 let continentColors = {}; // Colori per ciascun continente
 let glyphPositions = []; // Array per salvare le posizioni dei glifi
 let tooltip = { x: 0, y: 0, text: "", visible: false }; // Tooltip per informazioni sui glifi
+console.log({ spacingX, spacingY, marginLeft, marginTop, glyphPositions });
+let spacingX = (width - marginLeft - marginRight) / cols;
+let spacingY = (height - marginTop - marginBottom - rowMargin * Math.ceil(rows.length / cols)) / Math.ceil(rows.length / cols);
+
+if (spacingX < 50 || spacingY < 50) {
+  console.warn("Spaziamento troppo ridotto, aumenta i margini o riduci i glifi.");
+}
+
 
 function preload() {
   // Carichiamo il dataset
