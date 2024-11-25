@@ -9,6 +9,8 @@ function preload() {
   table = loadTable('data.csv', 'csv', 'header');
 }
 
+
+
 function setup() {
   // Creiamo il canvas
   createCanvas(windowWidth, windowHeight);
@@ -22,6 +24,11 @@ function setup() {
       continentColors[continent] = color(random(255), random(255), random(255)); // Colori casuali
     }
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  redraw();
 }
 
 function draw() {
