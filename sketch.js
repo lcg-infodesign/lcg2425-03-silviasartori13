@@ -4,22 +4,16 @@ let continentColors = {}; // Colori per ciascun continente
 let glyphPositions = []; // Array per salvare le posizioni dei glifi
 let tooltip = { x: 0, y: 0, text: "", visible: false }; // Tooltip per informazioni sui glifi
 
-const MIN_GLYPH_DISTANCE = 20; // Distanza minima tra i glifi
-
 function preload() {
   // Carichiamo il dataset
-  try {
-    table = loadTable('data.csv', 'csv', 'header');
-  } catch (error) {
-    console.error("Errore nel caricamento del dataset:", error);
-    noLoop(); // Ferma il disegno se non ci sono dati
-  }
+  table = loadTable('data.csv', 'csv', 'header');
 }
 
 function setup() {
   // Creiamo il canvas
   createCanvas(windowWidth, windowHeight);
-
+  noLoop(); // Renderizza solo quando necessario
+  
   // Assegna un colore per ogni continente
   let rows = table.getRows();
   for (let row of rows) {
@@ -33,9 +27,9 @@ function setup() {
 function draw() {
   background(240); // Puliamo lo schermo
   glyphPositions = []; // Reset delle posizioni
-
+  
   let rows = table.getRows();
-  let cols = floor(width / 150); // Calcolo dinamico delle colonne
+  let cols = 10;
   let marginLeft = 100;
   let marginTop = 150;
   let marginRight = 20;
@@ -57,29 +51,6 @@ function draw() {
     if (isNaN(length) || length === 0) continue;
 
     let size = map(length, 1000, 7000, 30, maxSize);
-
-    if (selectedRiver === row.getString('name')) {
-      size += sin(frameCount * 0.1) * 5; // Effetto pulsante
-    }
-
-    // Controlla la sovrapposizione con altri glifi
-    let overlap = true;
-    let attempts = 0;
-    while (overlap && attempts < 50) {
-      overlap = false;
-      for (let pos of glyphPositions) {
-        let d = dist(x, y, pos.x, pos.y);
-        if (d < size / 2 + pos.size / 2 + MIN_GLYPH_DISTANCE) {
-          // Se si sovrappongono, prova una nuova posizione
-          x = random(marginLeft, width - marginRight);
-          y = random(marginTop, height - marginBottom);
-          overlap = true;
-          attempts++;
-          break;
-        }
-      }
-    }
-
     glyphPositions.push({ x, y, size, name: row.getString('name'), row });
 
     // Disegniamo il glifo
@@ -103,7 +74,6 @@ function draw() {
   }
 
   drawLegend(); // Disegna la leggenda
-
   if (selectedRiver) {
     displaySelectedRiver(); // Mostra il nome del fiume selezionato
   }
@@ -139,11 +109,6 @@ function mouseMoved() {
     }
   }
   redraw(); // Ridisegna per aggiornare il tooltip
-}
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  redraw();
 }
 
 function drawLegend() {
@@ -219,27 +184,14 @@ function displaySelectedRiver() {
 }
 
 function displayTooltip() {
-  let padding = 10;
-  let lines = tooltip.text.split('\n');
-  let textWidth = 0;
-
-  for (let line of lines) {
-    textWidth = max(textWidth, textWidth(line));
-  }
-
-  let boxWidth = textWidth + padding * 2;
-  let boxHeight = lines.length * 16 + padding * 2;
-
-  fill(255, 240);
+  fill(255);
   stroke(0);
   strokeWeight(1);
-  rect(tooltip.x, tooltip.y, boxWidth, boxHeight, 5);
+  rect(tooltip.x, tooltip.y, 200, 70, 5);
 
   fill(0);
   noStroke();
   textSize(14);
   textAlign(LEFT, TOP);
-  for (let i = 0; i < lines.length; i++) {
-    text(lines[i], tooltip.x + padding, tooltip.y + padding + i * 16);
-  }
+  text(tooltip.text, tooltip.x + 10, tooltip.y + 10);
 }
